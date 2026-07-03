@@ -12,6 +12,7 @@
 		"format:check": "prettier . --check"
 	},
 	"dependencies": {
+		"@fontsource-variable/kumbh-sans": "^5.2.7",
 		"@tailwindcss/vite": "^4.3.2",
 		"react": "^19.2.7",
 		"react-dom": "^19.2.7",

@@ -1,111 +1,100 @@
+@import "@fontsource-variable/kumbh-sans";
+@import "tailwindcss";
+
 :root {
-	--text: #6b6375;
-	--text-h: #08060d;
-	--bg: #fff;
-	--border: #e5e4e7;
-	--code-bg: #f4f3ec;
-	--accent: #aa3bff;
-	--accent-bg: rgba(170, 59, 255, 0.1);
-	--accent-border: rgba(170, 59, 255, 0.5);
-	--social-bg: rgba(244, 243, 236, 0.5);
-	--shadow:
-		rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
-
-	--sans: system-ui, "Segoe UI", Roboto, sans-serif;
-	--heading: system-ui, "Segoe UI", Roboto, sans-serif;
-	--mono: ui-monospace, Consolas, monospace;
-
-	font: 18px/145% var(--sans);
-	letter-spacing: 0.18px;
-	color-scheme: light dark;
-	color: var(--text);
-	background: var(--bg);
-	font-synthesis: none;
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-
-	@media (max-width: 1024px) {
-		font-size: 16px;
-	}
+	--font-kumbh: "Kumbh Sans Variable", system-ui, sans-serif;
+	--color-grey-950: hsl(221, 13%, 13%);
+	--color-grey-500: hsl(219, 9%, 45%);
+	--color-grey-300: hsl(221, 22%, 81%);
+	--color-grey-100: hsl(218, 35%, 92%);
+	--color-grey-50: hsl(222, 63%, 98%);
+	--color-custom-orange-500: hsl(26, 100%, 55%);
+	--color-custom-orange-300: hsl(26, 100%, 71%);
+	--spacing-0: 0;
+	--spacing-100: 8px;
+	--spacing-200: 16px;
+	--spacing-300: 24px;
+	--spacing-400: 32px;
+	--spacing-500: 40px;
+	--spacing-600: 48px;
+	--spacing-700: 56px;
+	--spacing-900: 72px;
+	--spacing-1000: 80px;
+	--spacing-1200: 96px;
+	--spacing-1300: 104px;
+	--spacing-1600: 128px;
 }
 
-@media (prefers-color-scheme: dark) {
-	:root {
-		--text: #9ca3af;
-		--text-h: #f3f4f6;
-		--bg: #16171d;
-		--border: #2e303a;
-		--code-bg: #1f2028;
-		--accent: #c084fc;
-		--accent-bg: rgba(192, 132, 252, 0.15);
-		--accent-border: rgba(192, 132, 252, 0.5);
-		--social-bg: rgba(47, 48, 58, 0.5);
-		--shadow:
-			rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
-	}
-
-	#social .button-icon {
-		filter: invert(1) brightness(2);
-	}
+@theme inline {
+	--color-grey-950: var(--color-grey-950);
+	--color-grey-500: var(--color-grey-500);
+	--color-grey-300: var(--color-grey-300);
+	--color-grey-100: var(--color-grey-100);
+	--color-grey-50: var(--color-grey-50);
+	--color-custom-orange-500: var(--color-custom-orange-500);
+	--color-custom-orange-300: var(--color-custom-orange-300);
+	--spacing-0: var(--spacing-0);
+	--spacing-100: var(--spacing-100);
+	--spacing-200: var(--spacing-200);
+	--spacing-300: var(--spacing-300);
+	--spacing-400: var(--spacing-400);
+	--spacing-500: var(--spacing-500);
+	--spacing-600: var(--spacing-600);
+	--spacing-700: var(--spacing-700);
+	--spacing-900: var(--spacing-900);
+	--spacing-1000: var(--spacing-1000);
+	--spacing-1200: var(--spacing-1200);
+	--spacing-1300: var(--spacing-1300);
+	--spacing-1600: var(--spacing-1600);
 }
 
-#root {
-	width: 1126px;
-	max-width: 100%;
-	margin: 0 auto;
-	text-align: center;
-	border-inline: 1px solid var(--border);
-	min-height: 100svh;
-	display: flex;
-	flex-direction: column;
-	box-sizing: border-box;
+@utility text-preset-1 {
+	font-family: var(--font-kumbh);
+	font-size: 44px;
+	line-height: 48px;
+	font-weight: 700;
 }
 
-body {
-	margin: 0;
+@utility text-preset-2 {
+	font-family: var(--font-kumbh);
+	font-size: 28px;
+	line-height: 32px;
+	font-weight: 700;
 }
 
-h1,
-h2 {
-	font-family: var(--heading);
-	font-weight: 500;
-	color: var(--text-h);
+@utility text-preset-3 {
+	font-family: var(--font-kumbh);
+	font-size: 16px;
+	line-height: 26px;
+	font-weight: 700;
 }
 
-h1 {
-	font-size: 56px;
-	letter-spacing: -1.68px;
-	margin: 32px 0;
-	@media (max-width: 1024px) {
-		font-size: 36px;
-		margin: 20px 0;
-	}
-}
-h2 {
-	font-size: 24px;
-	line-height: 118%;
-	letter-spacing: -0.24px;
-	margin: 0 0 8px;
-	@media (max-width: 1024px) {
-		font-size: 20px;
-	}
-}
-p {
-	margin: 0;
+@utility text-preset-3-regular {
+	font-family: var(--font-kumbh);
+	font-size: 16px;
+	line-height: 26px;
+	font-weight: 400;
 }
 
-code,
-.counter {
-	font-family: var(--mono);
-	display: inline-flex;
-	border-radius: 4px;
-	color: var(--text-h);
-}
-
-code {
+@utility text-preset-4 {
+	font-family: var(--font-kumbh);
 	font-size: 15px;
-	line-height: 135%;
-	padding: 4px 8px;
-	background: var(--code-bg);
+	line-height: 26px;
+	font-weight: 400;
+}
+
+@utility text-preset-5 {
+	font-family: var(--font-kumbh);
+	font-size: 13px;
+	line-height: 16px;
+	font-weight: 700;
+	letter-spacing: 2px;
+}
+
+@utility text-preset-6 {
+	font-family: var(--font-kumbh);
+	font-size: 12px;
+	line-height: 15px;
+	font-weight: 700;
+	letter-spacing: 1.85px;
 }
