@@ -1,8 +1,9 @@
+import Header from "@/components/Header";
+
 function App() {
 	return (
-		<div className="text-preset-1">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua.
+		<div className="main-container mt-[19px] md:mt-7">
+			<Header />
 		</div>
 	);
 }

@@ -26,6 +26,7 @@
 }
 
 @theme inline {
+	--font-kumbh: var(--font-kumbh);
 	--color-grey-950: var(--color-grey-950);
 	--color-grey-500: var(--color-grey-500);
 	--color-grey-300: var(--color-grey-300);
@@ -97,4 +98,25 @@
 	line-height: 15px;
 	font-weight: 700;
 	letter-spacing: 1.85px;
+}
+
+@utility main-container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-300);
+
+	@media (min-width: 768px) {
+		margin-inline: auto;
+		width: min(calc(100% - var(--spacing-1000) * 2), 1110px);
+		gap: var(--spacing-600);
+	}
+
+	@media (min-width: 1280px) {
+		gap: var(--spacing-1200);
+	}
+}
+
+body {
+	@apply font-kumbh bg-white;
 }
