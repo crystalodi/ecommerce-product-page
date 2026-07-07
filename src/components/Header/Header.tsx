@@ -6,7 +6,7 @@ import NavMenu from "@/components/NavMenu";
 
 export default function Header() {
 	return (
-		<header className="flex justify-center md:justify-start">
+		<header className="flex flex-col items-center justify-center md:gap-y-400">
 			<div className="flex w-[87.33%] justify-between md:w-full md:items-center">
 				<div className="flex items-center justify-between gap-200 lg:gap-700">
 					<button
@@ -31,6 +31,10 @@ export default function Header() {
 					/>
 				</div>
 			</div>
+			<div
+				className="bg-grey-100 hidden h-[1px] w-full md:block"
+				aria-hidden={true}
+			/>
 		</header>
 	);
 }

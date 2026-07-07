@@ -13,7 +13,7 @@ export default function NavMenu({ variant }: NavMenuProps) {
 		"gap-x-400": variant === "desktop",
 	});
 
-	const navMenuListItemClasses = cn({
+	const navMenuListItemClasses = cn("capitalize", {
 		"text-grey-500 text-preset-3-regular text-[15px]": variant === "desktop",
 		"text-grey-950 text-preset-3 text-[18px]": variant === "mobile",
 	});
@@ -22,19 +22,19 @@ export default function NavMenu({ variant }: NavMenuProps) {
 		<nav aria-label={navMenuAriaLabel}>
 			<ul className={navMenuContainerClasses}>
 				<li className={navMenuListItemClasses}>
-					<span>Collections</span>
+					<span>collections</span>
 				</li>
 				<li className={navMenuListItemClasses}>
-					<span>Men</span>
+					<span>men</span>
 				</li>
 				<li className={navMenuListItemClasses}>
-					<span>Women</span>
+					<span>women</span>
 				</li>
 				<li className={navMenuListItemClasses}>
-					<span>About</span>
+					<span>about</span>
 				</li>
 				<li className={navMenuListItemClasses}>
-					<span>Contact</span>
+					<span>contact</span>
 				</li>
 			</ul>
 		</nav>
