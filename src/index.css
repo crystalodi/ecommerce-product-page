@@ -118,5 +118,5 @@
 }
 
 body {
-	@apply font-kumbh bg-white;
+	@apply font-kumbh bg-white text-[16px];
 }
