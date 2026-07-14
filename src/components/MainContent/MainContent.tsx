@@ -1,4 +1,5 @@
-import IconCart from "@/assets/icons/icon-cart.svg?react";
+import AddToCart from "@/components/AddToCart";
+import Lightbox from "@/components/Lightbox";
 
 export default function MainContent() {
 	const discountedPrice = 125;
@@ -9,7 +10,9 @@ export default function MainContent() {
 		<main className="flex">
 			<div className="w-full">
 				<div className="flex flex-col gap-y-300">
-					{/* Lightbox goes here */}
+					<div className="flex">
+						<Lightbox />
+					</div>
 					<div className="flex flex-col gap-y-400 px-300 md:px-0">
 						<div className="flex flex-col gap-y-200">
 							<p className="text-preset-6 text-grey-500 uppercase">
@@ -40,19 +43,8 @@ export default function MainContent() {
 								aria-label="regular retail price"
 							>{`$${regularPrice.toFixed(2)}`}</p>
 						</div>
-						<div className="flex flex-1 flex-col gap-y-200">
-							<button
-								type="button"
-								className="bg-custom-orange-500 hover:bg-custom-orange-300 flex h-700 cursor-pointer items-center justify-center rounded-[10px] py-200"
-							>
-								<IconCart
-									aria-hidden={true}
-									className="mr-[8px] h-[16px] w-[17.46px] shrink-0 [&>g]:fill-[#1D2026] [&>path]:fill-[#1D2026]"
-								/>
-								<span className="text-grey-950 leading-none font-bold whitespace-nowrap">
-									Add to cart
-								</span>
-							</button>
+						<div className="flex flex-col gap-y-200">
+							<AddToCart />
 						</div>
 					</div>
 				</div>
